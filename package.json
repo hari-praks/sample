@@ -1,3 +1,4 @@
+npm start:"node app.js"
 {
   "name": "weforpets",
   "version": "1.0.0",
