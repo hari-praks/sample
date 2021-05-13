@@ -1,6 +1,7 @@
 var express = require('express');
 var fs=require('fs');
 var path=require('path')
+const port=process.env.PORT || 5000
 var app = express();
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
@@ -41,12 +42,15 @@ app.get('/doctor.html',function(req,res){
 	res.sendFile( __dirname + "/" + "doctor.html" );
 	
 })
-/*
+
 app.post('/process_post',urlencodedParser, function (req, res) {
 // Prepare output in JSON format
 response = { UserID:req.body.userid, Password:req.body.pwd, };
 console.log(req.body)
 res.redirect('/project.html')
+	var server = app.listen(port, function () {
+					console.log("Example app listening at http://%s:%s//",port)})
+	/*
 MongoClient.connect('mongodb://localhost:27017/', function(err, db)
 	{ if (err) throw err;
 		console.log("Connected to Database");
