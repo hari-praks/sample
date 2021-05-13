@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find doctor's</title>
+  <link rel="stylesheet" type="text/css" href="internal1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src= "https://code.jquery.com/jquery-3.5.1.js"></script> 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+  <style>
+        #id1 {
+            margin-left: 30%;
+            background-color: linen;
+            padding: 3%;
+            margin-right: 30%;
+        }
+
+        #find {
+            width: 50%;
+            padding: 10px 0;
+            margin: 10px;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid #999;
+            outline: none;
+            background: transparent;
+        }
+
+      
+        button {
+            color: #FFF;
+            font-weight: 700;
+            width: 20%;
+            padding: 10px 30px;
+            cursor: pointer;
+            display: block;
+            margin:auto;
+            
+            background: blue;
+            border: 0;
+            outline: none;
+        }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+ 
+}
+
+#liid{
+  float: right;
+  border-right:1px solid #bbb;
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover{
+  border-top: 10px solid red;
+  color: white;
+}
+
+
+    #myInput {
+      background-image: url('Search.png'); /* Add a search icon to input */
+      background-position: 10px 10px; /* Position the search icon */
+      background-repeat: no-repeat; /* Do not repeat the icon image */
+      background-size: 20px;
+      width: 1602px;; /* Full-width */
+      font-size: 16px; /* Increase font-size */
+      padding: 12px 20px 12px 40px; /* Add some padding */
+      border: 1px solid #ddd; /* Add a grey border */
+      margin-bottom: 12px; /* Add some space below the input */
+    }
+    
+    #mytable {
+      border-collapse: collapse; /* Collapse borders */
+      width: 100%; /* Full-width */
+      border: 1px solid #ddd; /* Add a grey border */
+      font-size: 18px; /* Increase font-size */
+    }
+    
+    #mytable th, #mytable td {
+      text-align: left; /* Left-align text */
+      padding: 12px; /* Add padding */
+    }
+    
+    #mytable tr {
+      /* Add a bottom border to all table rows */
+      border-bottom: 1px solid #ddd;
+    }
+    
+    #mytable tr.header, #mytable tr:hover {
+      /* Add a grey background color to the table header and on hover */
+      background-color: #f1f1f1;
+    }
+    .container {
+  position: relative;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 10%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  width: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+            </style>
+    <script>
+      $(document).ready(function () {
+      var obj=[{ Speciality: "Anaesthesiology", NameofDoctor: "Mk Sharma", Phonenumber: "9999335612", ClinicAddress: "Sarojini nagar,Delhi"},
+    {  Speciality: "Feline", NameofDoctor: "Ritwik Joshi", Phonenumber: "8887654123", ClinicAddress: "Jaipur,Rajasthan"},
+    {  Speciality: "Veterinary immunology", NameofDoctor: "Ritika Verma", Phonenumber: "7776543562", ClinicAddress: "Jayanagar,Banglore"},
+    {  Speciality: "Oncology", NameofDoctor: "Rahul Singh", Phonenumber: "9876532156", ClinicAddress: "Chennai,Tamil Nadu"},
+    {  Speciality: "Radiology", NameofDoctor: "Aiswarya Naik", Phonenumber: "9875632145",ClinicAddress: "Nizamabad,Andhra Pradesh"},
+    { Speciality: "Porice", NameofDoctor: "Shyam Prasad", Phonenumber: "7734567212", ClinicAddress: "Basaveshwar Nagar,Bidar"},
+    {  Speciality: "Pathology",NameofDoctor: "Pooja Sharma",Phonenumber: "8876543243", ClinicAddress: "Jp nagar,Banglore"},
+    {  Speciality: "Radiology", NameofDoctor: "Rashi Talwar", Phonenumber: "9345123465", ClinicAddress: "Gandhi nagar,Gujurat"},
+    {  Speciality: "Veterinary immunology", NameofDoctor: "Sumit Gupta", Phonenumber: "9876548878", ClinicAddress: "Nizam nagar,Karnataka"},
+    {  Speciality: "Preventive Medicine", NameofDoctor: "Rahul Singh", Phonenumber: "8444554567",ClinicAddress: "Panaji,Goa"},
+    {  Speciality: "Preventive Medicine", NameofDoctor: "Anvi Mittal", Phonenumber: "8776580987", ClinicAddress: "Ghaziabad,Delhi"},
+    {  Speciality: "Preventive Medicine", NameofDoctor: "Nishant Verma", Phonenumber: "9876567787", ClinicAddress: "Hyderabad,Telangana"}
+     ]
+      var tbl=$("<table/>").attr("id","mytable"); 
+     //var tr1=$("tr").attr("class","header");
+      var tr1="<tr>";
+      
+      var td1="<th> Speciality</th>";
+      var td2="<th>Name of Doctor</th>";
+      var td3="<th>Phonenumber</th>";
+   
+      var td8="<th>ClinicAddress</th><tr>";
+     
+      $("#div1").append(tbl);
+      $("#mytable").append(tr1+td1+td2+td3+td8);
+      for(var i=0;i<obj.length;i++) { 
+    
+      var tr="<tr>";
+      var td4="<td>"+obj[i]["Speciality"]+"</td>";
+      var td5="<td>"+obj[i]["NameofDoctor"]+"</td>";
+      var td6="<td>"+obj[i]["Phonenumber"]+"</td>";
+      var td7="<td>"+obj[i]["ClinicAddress"]+"</td></tr>";
+      $("#mytable").append(tr+td4+td5+td6+td7); }}) 
+          </script> 
+    <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("mytable");
+      tr = table.getElementsByTagName("tr");
+    
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    </script>
+</head>
+
+<body bgcolor="#F0FFFF">
+    <ul id="ulid">
+    <li id="liid"><a href="login.html"><i class="fa fa-sign-in iconSize-3x"></i>
+      Login
+    </a></li>
+    <li id="liid"><a href="#"> <i class="fa fa-plus-square iconSize-2x"></i>
+      Post new ad</a></li>
+    <li id="liid"><a href="findpet.html" ><i class="fa fa-handshake-o iconSize-2x"></i>
+      Pets adoption
+    </a></li>
+    
+    <li id="liid"><a href="#"><i class="fa fa-ambulance"></i>
+      Find doctor
+      </a></li>
+    <li id="liid"><a href="CONTACT2.html"><i class="fa fa-envelope"></i>
+      Contact us
+      </a></li>
+    <li id="liid" style="float: left;"><a href="#">
+      We<span style="color: red;">For</span>pets
+      </a></li>
+     <li id="liid"><a href="project.html"><i class="fa fa-home"></i>
+            Home
+        </a></li>
+  </ul>
+    <div>
+    
+      <h1 style="font-size: 50px; text-align: center;">Welcome</h1>
+      <h3 style="font-size: 30px; text-align: center;">We're glad you're here!!</h3><br>
+      <div id="id1" style="margin-left: 10%; margin-right: 10%;background-color:  #4B0082">
+        <p style="font-weight:bold; font-size: 30px; color: white">#Hello Doctor!</p>
+      
+      </div><br>
+    </div>
+
+
+
+<div class="container">
+  <img src="images/docgoogle.jpg" class="image">
+  <div class="overlay">
+    <div class="text">
+    <h2  style="font-weight:bold;font-family:inherit;">We!The Doctors!</h2><br>
+    <p>
+      Health is not valued till sickness comes a very meaningful <br>and bitter truth quoted by Thomas Fuller Nowadays, people are<br> indulged in their activities so much, that they forget to keep <br>a check on their health.  We must remember that we don't have<br> a cure for everything.<br><h3> So....Prevention is better than Cure !!</h3>
+      </p>
+    </div>
+  </div>
+</div><br><br><br>
+
+<div class="container">
+  <img src="images/doctor5.jpg" class="image">
+  <div class="overlay">
+    <div class="text">
+    <h2  style="font-weight:bold;font-family:inherit;">VISION</h2><br>
+    <p>
+      To increase the availability of hospitality in all sectors<br> of medicine throughout India, at any point of time, at a feasible rate.<br>
+      These bring a new set of challenges for the staff of the facility<br> and administrators. Online scheduling software, a recent technological <br>advancement, has made the booking process in hospitals easier for <br>both patients and administrative staffs.
+      </p>
+    </div>
+  </div>
+</div>
+<br><br><br>
+
+<h1>Doctors all over India</h1>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+<div id="div1"> </div>
+    <br><br><div id="id1">
+    <form action="/show" method="POST">
+        <h1>Find a doctor according to you!!</h1>
+        
+        <input type="text" name="find" id="find" placeholder="Search by Location or Speciality"><br><br>
+                <input type="radio" name="find_details" id="country" value="Location">Location
+            <input type="radio" name="find_details" id="Speciality" value="Speciality">Speciality<br>
+        <br>
+        <button>submit</button>
+    </div><br><br>
+        
+    </form>
+                
+</body>
+</html>

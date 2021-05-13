@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lan="en">
+<head>
+    <meta charset="UTF-8" >
+    <title>Find Pets</title>
+   <!--- <link rel="stylesheet" href="CSS/sttyle.css">--->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+
+body {
+background:#f7faff;
+margin:0;
+}
+
+.header{
+    padding:45px 0 20px 40px;
+    /**border:5px solid black;*/
+    background-color: #610404;
+}
+.linki{
+    text-decoration: none;
+    font-size:24px;
+    color:white;
+}
+
+
+aside{
+float:right;
+width:435px;
+height: 768px;
+/*border: 2px solid black;*/
+padding:30px 0 0 40px;
+margin-right: 40px;
+margin-top: 40px;
+background-color: #321bec5e;
+box-shadow: 3px 2px 20px 0px;
+}
+
+h1{
+   margin:0px;
+   color:darkgreen;
+    font-size:25px;
+    font-family:sans-serif;
+    font-weight: normal;
+    }
+.main{
+    margin:0 0 0 57px;
+padding:35px 40px 0 30px;
+    color:darkblue;
+    font-size:13px;
+    font-family:"Arial";
+    line-height:18px;
+    height:1777px;
+    text-emphasis:justify;    
+}
+#block{
+   /* border: 2px solid black;*/
+    width: 400px;
+    background-color: white;
+    box-shadow:  3px 2px 20px 0px;
+    margin-bottom: 20px;
+}
+
+.heading{     /*ps:heading is ony in contact but it can be used for any page*/
+    /*text-align: center;*/
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: black;
+}
+#imagead img {
+   width:400px;
+    height: 220px;
+}
+#Petavailable{
+   color: black;
+    text-align: center;
+    background-color: #DAF7A6;
+    width: 297px;
+    height: 43px;
+    padding: 27px 0px 9px 0px;
+    font-size: 20px;
+}
+/*.details #homeaddress img {
+    width: 20px;
+}*/
+.details{
+    margin:0 40px 40px 40px;
+    padding: 20px;
+}
+.details p,span{
+    color: black;
+}
+i{
+    font-size:20px;
+}
+.filter{
+    height: 50px;
+    background:black;
+    text-align: center;
+    color: white;
+    margin:20px 40px 20px 1px;
+    padding: 20px;
+  
+}
+
+aside form select{
+    width:400px;
+    height: 40px;
+    border-radius: 5px;
+}
+aside input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('/WEBDA/IMages/Search.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  background-size: 20px;
+    border-radius: 5px;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+ aside input[type=text]:focus {
+  width: 100%;
+}
+label{
+    font-size: 20px;
+    font-weight:400;
+}
+.details2{
+width: 400px;
+background-color: white;
+padding: 0px;
+height: 560px;
+margin-right: 106px;
+box-shadow: 3px 2px 20px 0px #090c7f;
+
+}
+footer{
+    padding:6px 40px 6px 40px;
+    background:#DAF7A6;
+    font-family:"Lucida Sans Unicode";
+    font-size:11px;
+    color:#212E16;
+    text-decoration: right;
+}
+footer a{
+    text-decoration: none;
+    color:#212E16;
+}
+.separator{
+    color:black;
+    font-weight: bold;
+}
+
+/********************************CONTACT*********************/
+.contactaside{
+    background-image: url('/WEBDA/IMages/contactus.jpg');
+    background-repeat: no-repeat;
+    background-size: 759px;
+    width: 719px;
+    height: 478px;
+}
+#contact #form form{
+width: 500px;
+/*border: 2px solid black;*/
+padding: 20px;
+margin: 0 14px 14px 0px;
+box-shadow: 0px 2px 11px 1px;
+border-radius: 5px;
+}
+#contact input{
+    width:100%;
+    height:20px;
+    border-radius: 5px;
+    background: #3f51b547;
+}
+#contact #messages{
+     width:90%;
+    border-radius: 5px;
+    background: #3f51b547;
+
+}
+/*#contact #form #submit{
+    height: 30px;
+    background:#610404;
+}*/
+button{
+    height: 30px;
+    width: 100%;
+      background:#610404;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;  
+    
+}
+button:hover{
+  opacity: 0.8;
+  background:linen;
+  color: black;
+
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+ 
+}
+
+#liid{
+  float: right;
+  border-right:1px solid #bbb;
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover{
+  border-top: 10px solid red;
+  color: white;
+}
+
+
+    </style>
+
+    </head>
+<body>
+
+        <ul id="ulid">
+        <li id="liid"><a href="/"><i class="fa fa-sign-in iconSize-3x"></i>
+            Login
+        </a></li>
+        <li id="liid"><a href="#"> <i class="fa fa-plus-square iconSize-2x"></i>
+            Post new ad</a></li>
+        <li id="liid"><a href="findpet.html" ><i class="fa fa-handshake-o iconSize-2x"></i>
+            Pets adoption
+        </a></li>
+        
+        <li id="liid"><a href="doctor.html"><i class="fa fa-ambulance"></i>
+            Find doctor
+            </a></li>
+        <li id="liid"><a href="CONTACT2.html"><i class="fa fa-envelope"></i>
+            Contact us
+            </a></li>
+        <li id="liid"><a href="project.html"><i class="fa fa-home"></i>
+            Home
+        </a></li>
+    </ul>
+        
+        <aside >
+        <form>
+        <h1 class="filter"><i class="fas fa-filter"></i>  Filter Search</h1>
+        <label for="name"> </label>
+  <input type="text" name="search" placeholder="Search.."><br><br>
+<label for="name" >Country </label><br>
+
+<select id="mycountry" onchange="Acountry()">
+    <option value="India">India</option>
+    <option value="United States">United States</option>
+    <option value="Sri Lanka">Sri Lanka</option>
+    <option value="Japan">Japan</option>
+    <option value="Australia">Australia</option>
+</select><p id="cy"></p>
+
+<label for="states">All States</label><br>
+<!--<p onclick="Astate()" id="state">-->
+<select id="mystate" onchange="Astate()">
+<option value="Karnataka">Karnataka</option>
+    <option value="Tamil Nadu">Tamil Nadu</option>
+    <option value="Delhi">Delhi</option>
+    <option  value="Andhra Pradesh">Andhra Pradesh</option>
+    <option value="Goa">Goa</option>
+    <option value="Kerela">Kerela</option>
+</select><p id="st"></p>
+        
+<label for="name">Cities </label><br>
+
+<select id="mycity" onchange="Acity()">
+    <option value="Banglore">Banglore</option>
+    <option value="Manglore">Manglore</option>
+    <option value="Hubbali">Hubali</option>
+    <option value="Coorg">Coorg</option>
+    
+</select><p id="ci"></p>
+    
+<label for="name">Type </label><br>
+
+<select id="mytype" onchange="Atype()">
+    <option value="Dog">Dog</option>
+    <option value="Cat">Cat</option>
+    <option value="Parrot">Parrot</option>
+    <option value="Rabbit">Rabbit</option>
+    
+</select><p id="ty"></p><br>
+            
+<select id="mytime" onchange="Atime()">
+    <option value="Default">Default</option>
+    <option value="Newest">Newest</option>
+    <option value="Oldest">Oldest</option>
+    <option value="Featured">Featured</option>
+    <option value="Views">Views</option>
+    <option value="Rating">Rating</option>
+    
+</select><p id="ti"></p>
+
+
+
+            <!--</p>--->
+
+
+  </form>
+            
+                
+        
+        </aside>
+    <aside id="details2" class="details2">
+            <div id="block2">
+        <div id="imagead">
+      <img src="images/pet4.jpeg"> 
+        <div onmouseenter="myenterfunction2()" style="width: 400px;height:40px;display: block">
+            <div id="spanmouse2"> <a id="mouseenter2" ></a></div>
+            
+            </div>
+                </div>
+                
+      <div class="details">
+       <h3 id="Petavailable" style="margin: 0">Pet available</h3>
+        <p id="homeaddress"><i class="fas fa-map-marker-alt"  style="font-size:20px;color:red;"></i>Chennai,Tamil Nadu <p>
+           <p id="eye"><i class="fas fa-eye"></i>  279 views</p>
+           <p id="likes"><i class="far fa-thumbs-up"></i> 10likes</p>
+           <p id="calender"><i class="far fa-calendar"></i> 10 months</p>
+       
+       <span id="person"><i class="fas fa-user-tie"></i> Priya Sharma</span>
+           </div>
+            </div></aside>
+
+            <aside class="details2"style="margin-right: 180px;" >
+                <div id="block2">
+            <div id="imagead">
+          <img src="images/pet1.jpg"> 
+            <div onmouseenter="myenterfunction4()" style="width: 400px;height:40px;display: block">
+                <div id="spanmouse4"> <a id="mouseenter4" ></a></div>
+                
+                </div>
+                    </div>
+                    
+          <div class="details">
+           <h3 id="Petavailable" style="margin: 0">Pet available</h3>
+            <p id="homeaddress"><i class="fas fa-map-marker-alt"  style="font-size:20px;color:red;"></i>Chennai,Tamil Nadu <p>
+               <p id="eye"><i class="fas fa-eye"></i>  279 views</p>
+               <p id="likes"><i class="far fa-thumbs-up"></i> 10likes</p>
+               <p id="calender"><i class="far fa-calendar"></i> 10 months</p>
+           
+           <span id="person"><i class="fas fa-user-tie"></i> Priya Sharma</span>
+               </div>
+                </div></aside>
+        
+        <article class="main"> 
+       <!--- <div id="home-image">
+   <img src="Images/hey.png" alt="home page">
+    </div>-->
+    <aside class="details2" style="margin-top: 400px;">
+        <div id="block" >
+    <div id="imagead">
+  <img src="images/pet3.jpg"> 
+    <div onmouseenter="myenterfunction()" style="width: 400px;height:40px;display: block">
+        <div id="spanmouse"> <a id="mouseenter" ></a></div>
+        
+        </div>
+            </div>
+            
+  <div class="details" >
+   <h3 id="Petavailable" style="margin: 0">Pet available</h3>
+    <p id="homeaddress"><i class="fas fa-map-marker-alt"  style="font-size:20px;color:red;"></i> Banglore,Karnataka<p>
+       <p id="eye"><i class="fas fa-eye"></i>  224 views</p>
+       <p id="likes"><i class="far fa-thumbs-up"></i> 5 likes</p>
+       <p id="calender"><i class="far fa-calendar"></i> 8 months</p>
+   
+   <span id="person"><i class="fas fa-user-tie"></i> Rajesh Putta</span>
+       </div>
+        </div></aside>
+   <div id="block"style="margin-top: 968px;
+   ">
+        <div id="imagead">
+      <img src="images/pet2.jpg"> 
+        <div onmouseenter="myenterfunction3()" style="width: 400px;height:40px;display: block">
+            <div id="spanmouse3"> <a id="mouseenter3" ></a></div>
+            
+            </div>
+       </div>
+       <div class="details">
+       <h3 id="Petavailable" style="margin: 0">Pet available</h3>
+        <p id="homeaddress"><i class="fas fa-map-marker-alt"  style="font-size:20px;color:red;"></i> Banglore,Karnataka<p>
+           <p id="eye"><i class="fas fa-eye"></i>  288 views</p>
+           <p id="likes"><i class="far fa-thumbs-up"></i> 9 likes</p>
+           <p id="calender"><i class="far fa-calendar"></i> 5 months</p>
+       
+       <span id="person"><i class="fas fa-user-tie"></i> Rahul Sharma</span>
+           </div>
+          </div>
+     <!--  <aside>
+            <div id="block">
+        <div id="imagead">
+      <img src="IMages/pet3.jpg"> 
+        <div onmouseenter="myenterfunction()" style="width: 400px;height:40px;display: block">
+            <div id="spanmouse"> <a id="mouseenter" ></a></div>
+            
+            </div>
+                </div>
+                
+      <div class="details">
+       <h3 id="Petavailable" style="margin: 0">Pet available</h3>
+        <p id="homeaddress"><i class="fas fa-map-marker-alt"  style="font-size:20px;color:red;"></i> Banglore,Karnataka<p>
+           <p id="eye"><i class="fas fa-eye"></i>  224 views</p>
+           <p id="likes"><i class="far fa-thumbs-up"></i> 5 likes</p>
+           <p id="calender"><i class="far fa-calendar"></i> 8 months</p>
+       
+       <span id="person"><i class="fas fa-user-tie"></i> Rajesh Putta</span>
+           </div>
+            </div></aside>-->
+        </article>
+        
+   <footer>
+     &copy;2030 website&nbsp;<span class="separator">|</span> Design by<a href="https://www.youtube.com/">  WE<span style="color:deeppink">FOR</span>PETS</a>
+         
+        </footer>
+    <script>
+    function myenterfunction(){
+document.getElementById("mouseenter").setAttribute("href","findpet.html");
+document.getElementById("mouseenter").style.padding="20px";
+document.getElementById("mouseenter").style.color="white";
+document.getElementById("mouseenter").style.fontWeight="bold";
+document.getElementById("mouseenter").style.textDecoration="none";
+    document.getElementById("mouseenter").innerHTML="<center>VIEW DETAILS </center>";
+document.getElementById("spanmouse").style.background="black";
+document.getElementById("spanmouse").style.width="400px";
+document.getElementById("spanmouse").style.height="50px";
+    
+document.getElementById("spanmouse").style.margin="0 auto";
+        
+    }
+        function myenterfunction2(){
+document.getElementById("mouseenter2").setAttribute("href","findpet.html");
+document.getElementById("mouseenter2").style.padding="20px";
+document.getElementById("mouseenter2").style.color="white";
+document.getElementById("mouseenter2").style.fontWeight="bold";
+document.getElementById("mouseenter2").style.textDecoration="none";
+    document.getElementById("mouseenter2").innerHTML="<center>VIEW DETAILS </center>";
+document.getElementById("spanmouse2").style.background="black";
+document.getElementById("spanmouse2").style.width="400px";
+document.getElementById("spanmouse2").style.height="50px";
+    
+document.getElementById("spanmouse2").style.margin="0 auto";
+        
+    }
+
+    function myenterfunction3(){
+document.getElementById("mouseenter3").setAttribute("href","findpet.html");
+document.getElementById("mouseenter3").style.padding="20px";
+document.getElementById("mouseenter3").style.color="white";
+document.getElementById("mouseenter3").style.fontWeight="bold";
+document.getElementById("mouseenter3").style.textDecoration="none";
+    document.getElementById("mouseenter3").innerHTML="<center>VIEW DETAILS </center>";
+document.getElementById("spanmouse3").style.background="black";
+document.getElementById("spanmouse3").style.width="400px";
+document.getElementById("spanmouse3").style.height="50px";
+    
+document.getElementById("spanmouse3").style.margin="0 auto";
+        
+    }
+    function myenterfunction4(){
+document.getElementById("mouseenter4").setAttribute("href","findpet.html");
+document.getElementById("mouseenter4").style.padding="20px";
+document.getElementById("mouseenter4").style.color="white";
+document.getElementById("mouseenter4").style.fontWeight="bold";
+document.getElementById("mouseenter4").style.textDecoration="none";
+    document.getElementById("mouseenter4").innerHTML="<center>VIEW DETAILS </center>";
+document.getElementById("spanmouse4").style.background="black";
+document.getElementById("spanmouse4").style.width="400px";
+document.getElementById("spanmouse4").style.height="50px";
+    
+document.getElementById("spanmouse4").style.margin="0 auto";
+        
+    }
+        
+        function Acountry(){
+        var x=document.getElementById("mycountry").value;
+        document.getElementById("cy").innerHTML=x +" selected";
+        document.getElementById("cy").style.color="green";
+        //document.getElementById("mycountry").style.width="400px";
+        }
+        function Astate(){
+            var y=document.getElementById("mystate").value;
+            document.getElementById("st").innerHTML= y +" selected";
+        document.getElementById("st").style.color="green";
+    //document.getElementById("mystate").style.width="900px";
+        }
+        function Acity(){
+            var z=document.getElementById("mycity").value;
+            document.getElementById("ci").innerHTML= z+" selected";
+        document.getElementById("ci").style.color="green";
+
+        }
+        function Atype(){
+            var w=document.getElementById("mytype").value;
+            document.getElementById("ty").innerHTML= w+" selected";
+        document.getElementById("ty").style.color="green";
+
+        }
+        function Atime(){
+            var v=document.getElementById("mytime").value;
+            document.getElementById("ti").innerHTML= v+" selected";
+        document.getElementById("ti").style.color="green";
+
+        }
+    </script>
+            <!---</div>--->
+    
+    </body>
+    
+</html>

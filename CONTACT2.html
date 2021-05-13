@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lan="en">
+<head>
+    <meta charset="UTF-8" >
+    <title>Contact</title>
+   <!-- <link rel="stylesheet" href="CSS/sttyle.css">--->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/a
+ngularjs/1.8.0/angular.min.js"></script>
+    <script type="text/javascript">
+
+var app = angular.module('ngpatternApp', []);
+
+app.controller('ngpatternCtrl', function ($scope) {
+
+$scope.sendForm = function () {
+
+$scope.msg = "Form Validated,thank you :)";
+
+};
+
+});
+
+    </script>
+    <style>
+body {
+background:#f7faff;
+margin:0;
+}
+
+
+.header{
+    padding:45px 0 20px 40px;
+    /**border:5px solid black;*/
+    background-color: #610404;
+}
+.linki{
+    text-decoration: none;
+    font-size:24px;
+    color:white;
+}
+
+.separatenav{
+    color: black;
+    font-weight: bold;
+}
+.separatenav:hover{
+  color:white;
+    font-weight: bold;  
+}
+
+aside{
+float:right;
+width:435px;
+height: 768px;
+/*border: 2px solid black;*/
+padding:30px 0 0 40px;
+margin-right: 40px;
+margin-top: 40px;
+background-color: #321bec5e;
+box-shadow: 3px 2px 20px 0px;
+}
+
+h1{
+   margin:0px;
+   color:darkgreen;
+    font-size:25px;
+    font-family:sans-serif;
+    font-weight: normal;
+    }
+.main{
+    margin:0 0 0 57px;
+padding:35px 40px 0 30px;
+    color:darkblue;
+    font-size:13px;
+    font-family:"Arial";
+    line-height:18px;
+    height:1777px;
+    text-emphasis:justify;    
+}
+#block{
+   /* border: 2px solid black;*/
+    width: 400px;
+    background-color: white;
+    box-shadow:  3px 2px 20px 0px;
+    margin-bottom: 20px;
+}
+
+.heading{     /*ps:heading is ony in contact but it can be used for any page*/
+    /*text-align: center;*/
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: black;
+}
+#imagead img {
+   width:400px;
+    height: 220px;
+}
+#Petavailable{
+   color: black;
+    text-align: center;
+    background-color: #DAF7A6;
+    width: 297px;
+    height: 43px;
+    padding: 27px 0px 9px 0px;
+    font-size: 20px;
+}
+/*.details #homeaddress img {
+    width: 20px;
+}*/
+.details{
+    margin:0 40px 40px 40px;
+    padding: 20px;
+}
+.details p,span{
+    color: black;
+}
+i{
+    font-size:20px;
+}
+.filter{
+    height: 50px;
+    background:black;
+    text-align: center;
+    color: white;
+    margin:20px 40px 20px 1px;
+    padding: 20px;
+  
+}
+
+aside form select{
+    width:400px;
+    height: 40px;
+    border-radius: 5px;
+}
+aside input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('/WEBDA/IMages/Search.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  background-size: 20px;
+    border-radius: 5px;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+ aside input[type=text]:focus {
+  width: 100%;
+}
+label{
+    font-size: 20px;
+    font-weight:400;
+}
+.details2{
+width: 400px;
+background-color: white;
+padding: 0px;
+height: 560px;
+margin-right: 106px;
+box-shadow: 3px 2px 20px 0px #090c7f;
+
+}
+footer{
+    padding:6px 40px 6px 40px;
+    background:#DAF7A6;
+    font-family:"Lucida Sans Unicode";
+    font-size:11px;
+    color:#212E16;
+    text-decoration: right;
+}
+footer a{
+    text-decoration: none;
+    color:#212E16;
+}
+.separator{
+    color:black;
+    font-weight: bold;
+}
+
+/********************************CONTACT*********************/
+.contactaside{
+    background-image: url('/IMages/contactus.jpg');
+    background-repeat: no-repeat;
+    background-size: 759px;
+    width: 719px;
+    height: 478px;
+}
+#contact #form form{
+width: 500px;
+/*border: 2px solid black;*/
+padding: 20px;
+margin: 0 14px 14px 0px;
+box-shadow: 0px 2px 11px 1px;
+border-radius: 5px;
+}
+#contact input{
+    width:100%;
+    height:20px;
+    border-radius: 5px;
+    background: #3f51b547;
+}
+#contact #messages{
+     width:90%;
+    border-radius: 5px;
+    background: #3f51b547;
+
+}
+/*#contact #form #submit{
+    height: 30px;
+    background:#610404;
+}*/
+button{
+    height: 30px;
+    width: 100%;
+      background:#610404;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;  
+    
+}
+button:hover{
+  opacity: 0.8;
+  background:linen;
+  color: black;
+
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+ 
+}
+
+#liid{
+  float: right;
+  border-right:1px solid #bbb;
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover{
+  border-top: 10px solid red;
+  color: white;
+}
+
+
+    </style>
+
+    
+    </head>
+<body id="contact" >
+    <!---<div class ="container">--->
+      <ul id="ulid">
+        <li id="liid"><a href="/"><i class="fa fa-sign-in iconSize-3x"></i>
+            Login
+        </a></li>
+        <li id="liid"><a href="#"> <i class="fa fa-plus-square iconSize-2x"></i>
+            Post new ad</a></li>
+        <li id="liid"><a href="findpet.html" ><i class="fa fa-handshake-o iconSize-2x"></i>
+            Pets adoption
+        </a></li>
+        
+        <li id="liid"><a href="doctor.html"><i class="fa fa-ambulance"></i>
+            Find doctor
+            </a></li>
+        <li id="liid"><a href="CONTACT2.html"><i class="fa fa-envelope"></i>
+            Contact us
+            </a></li>
+        <li id="liid"><a href="project.html"><i class="fa fa-home"></i>
+            Home
+        </a></li>
+    </ul>
+        
+   
+        <aside class="contactaside">
+        
+        </aside>
+        
+        <article class="main">
+            
+      <!--  <img src="https://place-hold.it/300">-->
+            <h1 class="heading">Contact Us</h1>
+<div id="form" ng-app="ngpatternApp" ng-controller="ngpatternCtrl" >
+   
+               <form action="/post_contact" method="post" name="contact" novalidate ng-submit="contact.$valid &&sendForm()"> 
+               <p>
+                <label for="name">Name:</label> 
+<input type="text" name="Name" placeholder="Enter your name" id="name" ng-model="txt" ng-pattern="/^[A-Za-z]+$/" required  /><!---ng-model="contact.Name" required-->
+        <span style="color:Red" ng-show="contact.Name.$error.required"> Required! </span>
+<span style="color:Red" ng-show="contact.Name.$dirty&&contact.Name.$error.pattern">Please Enter Valid Name</span>
+
+
+<!--<span ng-show="contact.Name.$touched && contact.Name.$invalid "> Required! </span><br /><br />-->
+                   </p>
+                  
+                <p>
+                      <label for="email">Email:</label> 
+                     <input  type="text" name="email"  ng-model="txtmail" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required />
+                   </p>
+                   <span style="color:Red" ng-show="contact.email.$error.required"> Required! </span>
+<span style="color:Red" ng-show="contact.email.$dirty&&contact.email.$error.pattern">Please Enter Valid Email</span>
+
+
+<br />
+
+            
+                   <p>
+                     <label for="name">Subject:</label> 
+                     <input  type="text" name="Subject" id="sub">
+                   </p>
+                
+                <p>  
+                   <label for="message">Message:</label>
+                   <textarea  name="message" id="messages" cols="30" rows="10">
+                   
+                   </textarea>
+                   </p> 
+                   <p>
+                  <!-- <input id="submit" type="submit" name="submit" value="send message">-->
+
+<button type="submit">Submit Form</button><br /><br />
+
+<span>{{msg}}</span>
+
+                   
+                   </p>
+                
+                    </form>
+            
+            </div>
+            
+        </article>
+         <footer>
+        &copy;2030 website&nbsp;<span class="separator">|</span>Design by<a href="https://www.youtube.com/"> WE<span style="color:deeppink">FOR</span>PETS</a>
+         
+        </footer>
+    
+              
+  <!---  </div>--->
+    
+    </body>
+    
+</html>
