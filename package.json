@@ -9,8 +9,10 @@
     "npm": "6.x"
   },
   "scripts": {
+    "dev": "webpack serve",
     "start": "node app.js" ,
     "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production"
   },
   "author": "",
   "license": "ISC",
