@@ -47,7 +47,10 @@ app.post('/process_post',urlencodedParser, function (req, res) {
 response = { UserID:req.body.userid, Password:req.body.pwd, };
 console.log(req.body)
 res.redirect('/project.html')
-	var server = app.listen(process.env.PORT || 5000);
+	app.set('port', process.env.PORT || 8080);
+	var server = app.listen(app.get('port'), function() {
+		console.log('listening on port ', server.address().port);
+	});
 	/*
 MongoClient.connect('mongodb://localhost:27017/', function(err, db)
 	{ if (err) throw err;
