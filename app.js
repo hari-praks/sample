@@ -4,7 +4,7 @@ var path=require('path')
 var app = express();
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
-var MongoClient = require('mongodb').MongoClient;
+//var MongoClient = require('mongodb').MongoClient;
 app.use(express.static('public'))
 
 app.get('/', function (req, res) {
@@ -41,7 +41,7 @@ app.get('/doctor.html',function(req,res){
 	res.sendFile( __dirname + "/" + "doctor.html" );
 	
 })
-
+/*
 app.post('/process_post',urlencodedParser, function (req, res) {
 // Prepare output in JSON format
 response = { UserID:req.body.userid, Password:req.body.pwd, };
@@ -97,7 +97,7 @@ MongoClient.connect('mongodb://localhost:27017/', function(err, db)
 
 
 
-const mongoose = require('mongoose');
+/*const mongoose = require('mongoose');
 const methodOverride = require('method-override')
 const doctors = require('./models/doctor');
 
@@ -151,7 +151,7 @@ app.post('/show', async (req, res) => {
         res.send("Oops!!You got it wrong");
     }
 })
-
+*/
 
 
 
